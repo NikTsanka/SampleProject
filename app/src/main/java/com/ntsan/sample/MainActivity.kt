@@ -5,18 +5,16 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.ntsan.androidlib.AndroidClass
 import com.ntsan.kotlinlib.KotlinClass
-import com.ntsan.mylibrary.LibraryClass
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        log("onCreate")
+        log("onCreate ${AndroidClass().testValue} ${KotlinClass().testValue}")
         setContentView(R.layout.activity_main)
     }
+//    private val callAndroidShowMethod = AndroidClass().show("String, string, string.")
+//    private val callKtShowMethod = KotlinClass().show("String, string, string.")
 
-    val androidClass = AndroidClass()
-    val kotlinClass = KotlinClass()
-    val libraryClass = LibraryClass("string")
 
     private fun log(msg: String) {
         Log.d("Activity Lifecycle", msg)
@@ -24,31 +22,31 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        log("onStart")
+        log("onStart ${KotlinClass().testValue}")
     }
 
     override fun onRestart() {
         super.onRestart()
-        log("onRestart")
+        log("onRestart ${AndroidClass().testValue}")
     }
 
     override fun onResume() {
         super.onResume()
-        log("onResume")
+        log("onResume ${KotlinClass().testValue}")
     }
 
     override fun onPause() {
         super.onPause()
-        log("onPause")
+        log("onPause ${AndroidClass().testValue}")
     }
 
     override fun onStop() {
         super.onStop()
-        log("onStop")
+        log("onStop ${KotlinClass().testValue}")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        log("onDestroy")
+        log("onDestroy ${AndroidClass().testValue}")
     }
 }

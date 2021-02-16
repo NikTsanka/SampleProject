@@ -1,3 +1,10 @@
 package com.ntsan.kotlinlib
 
-class KotlinClass()
+class KotlinClass {
+
+    val testValue = "'Kotlin Class' Some test value"
+
+    fun show(text: String): String {
+        return text
+    }
+}

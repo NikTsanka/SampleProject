@@ -1,2 +1,2 @@
-include ':app',':Androidlib',':Kotlinlib',':mylibrary'
+include ':app',':Androidlib',':Kotlinlib'
 rootProject.name = "SampleProject"
