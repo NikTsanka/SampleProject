@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         log("onCreate ${AndroidClass().testValue} ${KotlinClass().testValue}")
         setContentView(R.layout.activity_main)
     }
+
 //    private val callAndroidShowMethod = AndroidClass().show("String, string, string.")
 //    private val callKtShowMethod = KotlinClass().show("String, string, string.")
 
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity() {
     private fun log(msg: String) {
         Log.d("Activity Lifecycle", msg)
     }
+
+   /* override fun finish() {
+        super.finish()
+    }*/
 
     override fun onStart() {
         super.onStart()
